@@ -1,0 +1,168 @@
+[gd_scene load_steps=15 format=3 uid="uid://cmteqw4geqxo4"]
+
+[ext_resource type="Script" uid="uid://dpfiaphbletde" path="res://Scripts/endings_scene.gd" id="1_iko68"]
+[ext_resource type="FontFile" uid="uid://i5tg627gk1tt" path="res://Dialogue/Fonts/Boogaloo-Regular.ttf" id="3_7grrw"]
+[ext_resource type="Script" uid="uid://cdutddy3wfvms" path="res://Scripts/endscreen_labels.gd" id="3_ae3nr"]
+[ext_resource type="Script" uid="uid://dhevmwo3fm5y0" path="res://Scripts/EndingsScene_transitions.gd" id="4_iko68"]
+[ext_resource type="Script" uid="uid://dny01nl0ns27x" path="res://Scripts/endscreen_play_again.gd" id="5_50rly"]
+[ext_resource type="Texture2D" uid="uid://cp4fytantdh07" path="res://Assets/CGs/click anywhere to play again.png" id="6_hvrqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50rly"]
+size = Vector2(1280, 720)
+
+[sub_resource type="Animation" id="Animation_mlem6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yat15"]
+resource_name = "blink"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.866667, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inm8y"]
+_data = {
+&"RESET": SubResource("Animation_mlem6"),
+&"blink": SubResource("Animation_yat15")
+}
+
+[sub_resource type="Animation" id="Animation_5jffn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aht7i"]
+resource_name = "fade_to_black"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kpo4j"]
+resource_name = "fade_to_normal"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n42c"]
+_data = {
+&"RESET": SubResource("Animation_5jffn"),
+&"fade_to_black": SubResource("Animation_aht7i"),
+&"fade_to_normal": SubResource("Animation_kpo4j")
+}
+
+[node name="Endings" type="Node2D"]
+script = ExtResource("1_iko68")
+
+[node name="Labels" type="Node2D" parent="."]
+script = ExtResource("3_ae3nr")
+
+[node name="One Liner" type="Label" parent="Labels"]
+offset_left = 96.0
+offset_top = 200.0
+offset_right = 1280.0
+offset_bottom = 296.0
+theme_override_fonts/font = ExtResource("3_7grrw")
+theme_override_font_sizes/font_size = 80
+text = "You snooze you lose."
+
+[node name="Endings Found" type="Label" parent="Labels"]
+offset_left = 104.0
+offset_top = 294.0
+offset_right = 1288.0
+offset_bottom = 377.0
+theme_override_fonts/font = ExtResource("3_7grrw")
+theme_override_font_sizes/font_size = 50
+text = "0/7 endings found"
+
+[node name="Play Again" type="Area2D" parent="."]
+script = ExtResource("5_50rly")
+
+[node name="Sprite2D" type="Sprite2D" parent="Play Again"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+texture = ExtResource("6_hvrqf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Play Again"]
+position = Vector2(640, 360)
+shape = SubResource("RectangleShape2D_50rly")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Play Again"]
+libraries = {
+&"": SubResource("AnimationLibrary_inm8y")
+}
+autoplay = "blink"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Transition" type="CanvasLayer" parent="."]
+script = ExtResource("4_iko68")
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_4n42c")
+}
+
+[connection signal="input_event" from="Play Again" to="Play Again" method="_on_input_event"]
+[connection signal="mouse_entered" from="Play Again" to="Play Again" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Play Again" to="Play Again" method="_on_mouse_exited"]

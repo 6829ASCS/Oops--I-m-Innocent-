@@ -1,0 +1,8 @@
+[style name="Style Narrator 2"]
+[signal arg="black"]
+Hurt by their cruel insults, you shamefully handcuff yourself and get into the back of the cop car.
+While you stare out the car window, you can’t help but agree with the cops and wonder why you did nothing for those three whole minutes.
+Maybe things would have ended differently if you had.
+[signal arg="jail"]
+You are convicted of vehicular manslaughter and sentenced to life in prison.
+[signal arg="end_transition"]

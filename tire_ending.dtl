@@ -1,0 +1,7 @@
+[style name="Style Narrator 2"]
+[signal arg="black"]
+You speed off, leaving the cops behind you struggling to keep up.
+You stick out your tongue, mocking them.
+[signal arg="dead"]
+The guardrail doesn’t laugh back when you slam into it.
+[signal arg="end_transition"]

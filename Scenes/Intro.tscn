@@ -1,0 +1,405 @@
+[gd_scene load_steps=19 format=3 uid="uid://crtg7jk4qh06s"]
+
+[ext_resource type="AudioStream" uid="uid://cx2tjb7a7v44" path="res://Assets/Audio/path-to-redemption-garage-rock-punk-274976.mp3" id="1_iffca"]
+[ext_resource type="Script" uid="uid://bhy53av3tktmq" path="res://Scripts/animated_intro.gd" id="1_qs2gn"]
+[ext_resource type="Texture2D" uid="uid://bahv1wh8j8x4" path="res://Assets/Intro/Road1.PNG" id="1_u3s32"]
+[ext_resource type="Texture2D" uid="uid://bbxqbrxo2x0p" path="res://Assets/Intro/Road2.PNG" id="2_ina6a"]
+[ext_resource type="Texture2D" uid="uid://52pjrrf5b6pq" path="res://Assets/Sprites/deadguy/TinderScrolling.PNG" id="3_tay7t"]
+[ext_resource type="Texture2D" uid="uid://dlals8dke25n8" path="res://Assets/Intro/MusicNotes2.PNG" id="3_yptci"]
+[ext_resource type="Texture2D" uid="uid://cqg8y3yrd8xfm" path="res://Assets/Sprites/deadguy/Scared.PNG" id="4_5dcil"]
+[ext_resource type="Texture2D" uid="uid://d1blp3u7pxaii" path="res://Assets/Intro/DriverPOV.PNG" id="4_jw2oo"]
+[ext_resource type="Texture2D" uid="uid://docw7irik213k" path="res://Assets/Intro/MusicNotes1.PNG" id="4_qs2gn"]
+[ext_resource type="Texture2D" uid="uid://dqd4jsshfn0mi" path="res://Assets/Intro/Wheel.PNG" id="5_5dcil"]
+[ext_resource type="AudioStream" uid="uid://dyimesb7vw8um" path="res://Assets/Audio/car-crash-sound-376882.mp3" id="5_iffca"]
+[ext_resource type="AudioStream" uid="uid://uk6mjgj4xa4w" path="res://Assets/Audio/brakes.mp3" id="6_o6jpy"]
+[ext_resource type="Texture2D" uid="uid://srod3h8akt03" path="res://Assets/Black.png" id="8_o6jpy"]
+[ext_resource type="Shader" uid="uid://c64fymkcsrbc0" path="res://Shaders/screeneffect.gdshader" id="14_bsmil"]
+
+[sub_resource type="Animation" id="Animation_iffca"]
+resource_name = "Intro"
+length = 7.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animated Sequence/DriverPov:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.510357, 1, 1.30426, 1.70731, 2.18964, 2.5, 3.00305, 3.5, 3.78964, 4.2, 4.69695, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(640, 515), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 480), Vector2(640, 500), Vector2(640, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animated Sequence/Wheel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.510357, 1.00305, 1.29269, 1.7, 2.19269, 2.5, 3.00305, 3.50305, 3.78539, 4.2, 4.7, 5.13333, 5.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(640, 515), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 465), Vector2(640, 503), Vector2(640, 503), Vector2(640, 480), Vector2(640, 500), Vector2(640, 500), Vector2(716, 539)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animated Sequence/Wheel:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.13333, 5.26667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.36821]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Animated Sequence/Road:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.00610051, 0.0938995, 0.190849, 0.290849, 0.390849, 0.490849, 0.590849, 0.6939, 0.7939, 0.90305, 1, 1.10305, 1.19695, 1.29695, 1.3939, 1.49085, 1.6, 1.7, 1.79695, 1.89695, 1.99695, 2.1, 2.2, 2.3, 2.4, 2.5, 2.5939, 2.69085, 2.79085, 2.89085, 2.99085, 3.09085, 3.1939, 3.2939, 3.40305, 3.5, 3.60305, 3.69695, 3.79695, 3.8939, 3.99085, 4.1, 4.2, 4.29695, 4.39695, 4.49695, 4.6, 4.7, 4.8, 4.89695, 4.9939, 5.10305, 5.20305, 5.3, 5.4, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32"), ExtResource("2_ina6a"), ExtResource("1_u3s32")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Animated Sequence/Black:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.466667, 5.26057, 5.46057),
+"transitions": PackedFloat32Array(1, 1, 1, 6.96439, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Animated Sequence/Deadguy:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.8939, 5.22723),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(228.535, 282), Vector2(570, 308)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Animated Sequence/Deadguy:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.8939, 5.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.58, 0.58)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Animated Sequence/Deadguy:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4.8939, 5.23333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_tay7t"), ExtResource("4_5dcil")]
+}
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Animated Sequence/AudioStreamPlayer2D_1")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 2.2852,
+"start_offset": 0.132809,
+"stream": ExtResource("6_o6jpy")
+}],
+"times": PackedFloat32Array(5.03172)
+}
+tracks/8/use_blend = true
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Animated Sequence/Deadguy:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 4.8939),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Animated Sequence/AudioStreamPlayer2D_2")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 114.553,
+"start_offset": 0.0,
+"stream": ExtResource("1_iffca")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_iffca")
+}],
+"times": PackedFloat32Array(0, 5.33333)
+}
+tracks/10/use_blend = true
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Animated Sequence/Music Notes:texture")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci"), ExtResource("4_qs2gn"), ExtResource("3_yptci")]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Animated Sequence/Music Notes:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.0443, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.139626, 0.139626, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Animated Sequence/Music Notes:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 4.83333, 5.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o6jpy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animated Sequence/DriverPov:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 488)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animated Sequence/Wheel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 482)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Animated Sequence/Wheel:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Animated Sequence/Road:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_ina6a")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Animated Sequence/Black:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Animated Sequence/Deadguy:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-110, 281)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Animated Sequence/Deadguy:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.45, 0.45)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Animated Sequence/Deadguy:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_5dcil")]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Animated Sequence/Deadguy:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Animated Sequence/Music Notes:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_yptci")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Animated Sequence/Music Notes:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yptci"]
+_data = {
+&"Intro": SubResource("Animation_iffca"),
+&"RESET": SubResource("Animation_o6jpy")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bsmil"]
+shader = ExtResource("14_bsmil")
+shader_parameter/amplitude = 1.0
+shader_parameter/frequency = 1.2
+shader_parameter/speed = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Animated Sequence" type="Node2D" parent="."]
+position = Vector2(-16, -3)
+scale = Vector2(1.016, 1.016)
+script = ExtResource("1_qs2gn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animated Sequence"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_yptci")
+}
+autoplay = "Intro"
+
+[node name="Road" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(640, 488)
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("2_ina6a")
+
+[node name="Deadguy" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(-110, 281)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_5dcil")
+
+[node name="DriverPov" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(640, 488)
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("4_jw2oo")
+
+[node name="Wheel" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(640, 482)
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("5_5dcil")
+
+[node name="Music Notes" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(640, 500)
+rotation = -0.0872665
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_yptci")
+
+[node name="Black" type="Sprite2D" parent="Animated Sequence"]
+position = Vector2(635, 358)
+scale = Vector2(5.14729, 2.94884)
+texture = ExtResource("8_o6jpy")
+
+[node name="AudioStreamPlayer2D_1" type="AudioStreamPlayer2D" parent="Animated Sequence"]
+
+[node name="AudioStreamPlayer2D_2" type="AudioStreamPlayer2D" parent="Animated Sequence"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_bsmil")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.45
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

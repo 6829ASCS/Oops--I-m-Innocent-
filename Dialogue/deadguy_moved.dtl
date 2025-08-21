@@ -1,0 +1,15 @@
+join "big mac" (7. No Funny Business) right
+"big mac" (1. Big Dawg): Well, well, well… [pause=0.5] what do we have here?
+leave "big mac"
+join frenchie (1. Erm.. Akshually) left
+frenchie: Looks like vadalism, Sarge!
+leave frenchie
+join "big mac" (6. Neverous But Tryna Stay Cool) right
+"big mac": Smells like blood...
+leave "big mac"
+join frenchie (13. Shocked Scratch) left
+frenchie: NO.. [pause=0.3]How could you...
+frenchie: [lspeed = 0.01]Are you seriously not educated on how dangerous paint chemicals can be to our precious environment, or do you just not care!?
+frenchie: [lspeed = 0.01]Do you realize how many innocent squirrels could slip, how many hardworking city workers will have to scrub this mess, and how utterly tasteless it is to pick red of all colours?? You think this is art!?
+frenchie (12. Shocked Cry Scratch): I mean come on, you're putting the fragile ecosystem of this forest at risk! This is MURDER!!
+[end_timeline]

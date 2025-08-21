@@ -1,0 +1,23 @@
+join "big mac" (7. No Funny Business) right
+"big mac" (1. Big Dawg): Well, well, well… [pause=0.5] what do we have here?
+leave "big mac"
+join frenchie (9. Neutral Scratch) left
+frenchie (5. Joyful Erm Akshually): Looks like a dead body, Sarge! Probably got hit by this car over here!
+leave frenchie
+join "big mac" right
+"big mac": It sure is, French Fry.
+"big mac" (7. No Funny Business): [lspeed=0.1]Wait a second...
+"big mac" (9. WATDAHELL): That hat... [pause=0.5]with the body... [pause=0.5]only the super dangerous extremely wanted and [wave]sexy[/wave] mob boss who we've been hunting for 15 years wears that hat!
+leave "big mac"
+join frenchie left
+frenchie (6. Joyful Scratch): Oh fiddlesticks! Did we finally get him, Sarge?
+leave frenchie
+join "big mac" right
+"big mac" (8. Non Kalant Cry): We sure did French Fry..
+leave "big mac"
+join frenchie (7. Looking Down Scratch) left
+frenchie (10. No Eye contact Erm Akshually): Does this mean we finally get to go on that beach trip to Miami?
+leave frenchie
+join "big mac" right
+"big mac" (2. Genuine Joy): Yes french fry, it's finally bikini time.
+[end_timeline]

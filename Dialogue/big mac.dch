@@ -1,0 +1,110 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+&"default_portrait": "1. Big Dawg",
+&"description": "",
+&"display_name": "",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 100),
+&"portraits": {
+"1. Big Dawg": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/BigDawg.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"10. Hair": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/Hair.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"2. Genuine Joy": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/Genuine joy.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"3. HELLLLYEAH": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/HELLLLYEAHH.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"4. Hell Yeah": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/HellYeah.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"5. Let Me Take A Closer Look": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/LetMeTakeACloserLook.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"6. Neverous But Tryna Stay Cool": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/NervousButTrynStayCool.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"7. No Funny Business": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/NoFunnyBusiness.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"8. Non Kalant Cry": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/NonKalantCry.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"9. WATDAHELL": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/big mac/WATDAHELL.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

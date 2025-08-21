@@ -1,0 +1,290 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=36 format=3 uid="uid://dnr42imcx8qbi"]
+
+[ext_resource type="Script" uid="uid://qwufnn48xyia" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_uvenq"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_osq4n"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_66oua"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_png2y"]
+[ext_resource type="Script" uid="uid://b1hil2kfcm36h" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd" id="5_f6qbe"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_5iril"]
+[ext_resource type="Script" uid="uid://c14m16imw8kau" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/animations.gd" id="6_jb06d"]
+[ext_resource type="StyleBox" uid="uid://dkv1pl1c1dq6" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres" id="7_exc24"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_w82i6"]
+[ext_resource type="Script" uid="uid://bmvbd6p7fj22x" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="8_67d2s"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_ssl1t"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_i4ogq"]
+[ext_resource type="Script" uid="uid://dv4a2s7gg5xke" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="9_ym2af"]
+[ext_resource type="Script" uid="uid://iqtjmf0vnmem" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_f6qbe"]
+[ext_resource type="Script" uid="uid://dyhvco6ja4qe1" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="10_uk5g7"]
+[ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Example Assets/next-indicator/next.svg" id="11_b06ta"]
+[ext_resource type="Script" uid="uid://iasmq3xguajq" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/autoadvance_indicator.gd" id="12_yvvbo"]
+[ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="13_n33j1"]
+[ext_resource type="Script" uid="uid://dvosoyobl3qcw" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="14_3sqkx"]
+
+[sub_resource type="Resource" id="Resource_uvenq"]
+script = ExtResource("1_uvenq")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_osq4n"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("2_osq4n")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_66oua"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("3_66oua")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_png2y"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("4_png2y")
+overrides = {}
+
+[sub_resource type="Animation" id="Animation_au0a2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/AnimationParent/Sizer/DialogTextPanel:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_6kbwc"]
+resource_name = "new_text"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent/Sizer/DialogTextPanel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(3, 3, 3, 3, 3),
+"points": PackedFloat32Array(0, -0.025, 0, 0.025, 0, 0.005, -0.025, 0, 0.025, 0, -0.005, -0.025, 0, 0.025, 0, 0.005, -0.025, 0, 0.025, 0, 0, -0.025, 0, 0.025, 0),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_g6k55"]
+resource_name = "textbox_fade_up"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, 19.6793), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_htbgc"]
+resource_name = "textbox_pop"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/AnimationParent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/AnimationParent:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0899883, 0.0258223, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/AnimationParent:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.793957, 0.778082), Vector2(0.937299, 1.14248), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/AnimationParent:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c14kh"]
+_data = {
+&"RESET": SubResource("Animation_au0a2"),
+&"new_text": SubResource("Animation_6kbwc"),
+&"textbox_fade_up": SubResource("Animation_g6k55"),
+&"textbox_pop": SubResource("Animation_htbgc")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_v8y64"]
+
+[sub_resource type="PackedScene" id="PackedScene_y8ejv"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("VN_TextboxLayer", "layout_mode", "anchors_preset", "anchor_right", "anchor_bottom", "grow_horizontal", "grow_vertical", "mouse_filter", "script", "box_panel", "box_size", "name_label_box_panel", "name_label_box_modulate", "Control", "Animations", "unique_name_in_owner", "libraries", "autoplay", "AnimationPlayer", "Anchor", "anchor_left", "anchor_top", "AnimationParent", "Sizer", "offset_left", "offset_top", "offset_right", "DialogTextPanel", "self_modulate", "theme_override_styles/panel", "metadata/_edit_layout_mode", "PanelContainer", "DialogicNode_DialogText", "theme_override_colors/default_color", "theme_override_font_sizes/bold_italics_font_size", "theme_override_font_sizes/italics_font_size", "theme_override_font_sizes/normal_font_size", "theme_override_font_sizes/bold_font_size", "bbcode_enabled", "text", "visible_characters_behavior", "textbox_root", "RichTextLabel", "DialogicNode_TypeSounds", "play_every_character", "AudioStreamPlayer", "NextIndicator", "size_flags_horizontal", "size_flags_vertical", "show_on_questions", "texture", "AutoAdvanceProgressbar", "modulate", "custom_minimum_size", "max_value", "step", "value", "show_percentage", "ProgressBar", "NameLabelHolder", "NameLabelPanel", "offset_bottom", "metadata/_edit_use_custom_anchors", "metadata/_edit_group_", "DialogicNode_NameLabel", "theme_override_colors/font_color", "theme_override_fonts/font", "theme_override_font_sizes/font_size", "name_label_root", "Label"),
+"node_count": 13,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 13, 0, -1, 12, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 3, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 0, 0, 0, 18, 14, -1, 4, 15, 9, 16, 10, 17, 11, 8, 12, 0, 0, 0, 13, 19, -1, 8, 1, 13, 2, 14, 20, 15, 21, 2, 3, 15, 4, 2, 5, 3, 6, 16, 0, 2, 0, 13, 22, -1, 9, 1, 13, 2, 14, 20, 15, 21, 2, 3, 15, 4, 2, 5, 3, 6, 16, 7, 3, 0, 3, 0, 13, 23, -1, 13, 15, 9, 1, 13, 2, 14, 20, 15, 21, 2, 3, 15, 4, 2, 24, 17, 25, 18, 26, 19, 5, 3, 6, 16, 7, 3, 0, 4, 0, 31, 27, -1, 11, 15, 9, 28, 20, 1, 13, 2, 1, 3, 2, 4, 2, 5, 3, 6, 3, 7, 3, 29, 21, 30, 13, 0, 5, 0, 42, 32, -1, 13, 15, 9, 1, 3, 7, 13, 33, 22, 34, 1, 35, 1, 36, 1, 37, 1, 38, 9, 39, 23, 40, 13, 8, 24, 1073741865, 25, 0, 6, 0, 45, 43, -1, 3, 15, 9, 8, 26, 44, 16, 0, 5, 0, 13, 46, -1, 9, 15, 9, 1, 3, 47, 27, 48, 27, 7, 3, 8, 28, 49, 9, 50, 29, 30, 13, 0, 5, 0, 58, 51, -1, 11, 15, 9, 52, 30, 53, 31, 1, 3, 48, 27, 7, 3, 54, 2, 55, 32, 56, 15, 57, 33, 8, 34, 0, 5, 0, 13, 59, -1, 2, 1, 3, 7, 3, 0, 10, 0, 31, 60, -1, 11, 15, 9, 28, 20, 1, 13, 25, 18, 26, 35, 61, 36, 7, 3, 29, 37, 30, 13, 62, 9, 63, 9, 0, 11, 0, 69, 64, -1, 8, 15, 9, 1, 3, 65, 22, 66, 38, 67, 1, 39, 39, 8, 40, 1073741892, 25, 0),
+"variants": [3, 15, 1.0, 2, ExtResource("5_f6qbe"), "res://VisualNovelTextbox/vn_textbox_default_panel.tres", Vector2(550, 150), "res://VisualNovelTextbox/vn_textbox_name_label_panel.tres", Color(0, 0, 0, 1), true, {
+&"": SubResource("AnimationLibrary_c14kh")
+}, "RESET", ExtResource("6_jb06d"), 1, 7, 0.5, 0, -150.0, -50.0, 150.0, Color(0.00784314, 0.00784314, 0.00784314, 0.843137), ExtResource("7_exc24"), Color(1, 1, 1, 1), "Some default text", ExtResource("8_67d2s"), NodePath(".."), ExtResource("9_ym2af"), 8, ExtResource("10_uk5g7"), ExtResource("11_b06ta"), Color(1, 1, 1, 0.188235), Vector2(0, 10), 0.001, false, ExtResource("12_yvvbo"), 9.0, -25.0, ExtResource("13_n33j1"), SubResource("FontVariation_v8y64"), "S", ExtResource("14_3sqkx")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_vy8qd"]
+script = ExtResource("1_uvenq")
+scene = SubResource("PackedScene_y8ejv")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_5iril"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("6_5iril")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_w82i6"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("7_w82i6")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_ssl1t"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("8_ssl1t")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_i4ogq"]
+script = ExtResource("1_uvenq")
+scene = ExtResource("9_i4ogq")
+overrides = {}
+
+[resource]
+script = ExtResource("10_f6qbe")
+name = "New_File"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_uvenq"),
+"10": SubResource("Resource_osq4n"),
+"11": SubResource("Resource_66oua"),
+"12": SubResource("Resource_png2y"),
+"13": SubResource("Resource_vy8qd"),
+"14": SubResource("Resource_5iril"),
+"15": SubResource("Resource_w82i6"),
+"16": SubResource("Resource_ssl1t"),
+"17": SubResource("Resource_i4ogq")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_uvenq")]([])
+metadata/_latest_layer = "12"

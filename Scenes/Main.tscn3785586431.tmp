@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://fv3qm5y4dlr4"]
+
+[ext_resource type="Texture2D" uid="uid://b3fsxh4d1uxwj" path="res://Assets/crime scene/Car.PNG" id="2_jw32o"]
+[ext_resource type="Script" uid="uid://cip2wgf4yosgl" path="res://Scripts/item_script.gd" id="3_kln2b"]
+[ext_resource type="Script" uid="uid://c6gd6mtjxtliy" path="res://Scripts/black_tint.gd" id="4_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://c3kplkmhefule" path="res://Assets/crime scene/Road.PNG" id="5_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://srod3h8akt03" path="res://Assets/Black.png" id="5_v1gob"]
+[ext_resource type="Texture2D" uid="uid://hwbkjqpmsrht" path="res://Assets/crime scene/Tire.PNG" id="7_4kpch"]
+[ext_resource type="Texture2D" uid="uid://ona2ciku60s1" path="res://Assets/crime scene/FullScene_Ref.PNG" id="7_50glp"]
+[ext_resource type="Texture2D" uid="uid://d2dwd72rxq3ey" path="res://Assets/crime scene/Gun.PNG" id="8_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://dhhl5klgnjkl1" path="res://Assets/crime scene/Hat.PNG" id="9_4kpch"]
+[ext_resource type="Texture2D" uid="uid://rcq4m75iifxv" path="res://Assets/crime scene/Trees.PNG" id="10_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://vr7sl77sby74" path="res://Assets/crime scene/GirlWig.PNG" id="10_grg3l"]
+[ext_resource type="Texture2D" uid="uid://h2len6261mgg" path="res://Assets/crime scene/PreCrash.PNG" id="11_frkhe"]
+[ext_resource type="Script" uid="uid://bug2mtwm08gw3" path="res://Scenes/truck.gd" id="12_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://msy5kct7s3lk" path="res://Assets/crime scene/Truck.PNG" id="12_grg3l"]
+[ext_resource type="Script" uid="uid://ce5t3irngoo12" path="res://Scripts/deadguy.gd" id="14_h1m7h"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Road" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("5_pbw6q")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_jw32o")
+
+[node name="Item - gun" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "gun"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - gun"]
+position = Vector2(640, 360)
+texture = ExtResource("8_bmxlf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - gun"]
+polygon = PackedVector2Array(599, 544, 608, 542, 606, 526, 609, 525, 609, 530, 616, 528, 615, 521, 623, 518, 622, 509, 593, 519)
+
+[node name="Item - hat" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "hat"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - hat"]
+position = Vector2(640, 360)
+texture = ExtResource("9_4kpch")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - hat"]
+polygon = PackedVector2Array(649, 468, 657, 475, 700, 470, 703, 465, 694, 456, 697, 446, 687, 435, 673, 433, 664, 435, 661, 449, 653, 453, 650, 457)
+
+[node name="Item - wig" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "wig"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - wig"]
+position = Vector2(640, 360)
+texture = ExtResource("10_grg3l")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - wig"]
+polygon = PackedVector2Array(651, 549, 641, 541, 633, 519, 634, 509, 639, 504, 644, 503, 651, 498, 657, 498, 668, 503, 680, 515, 684, 527, 684, 531, 678, 523, 678, 541, 663, 534, 665, 539, 672, 541, 665, 545, 658, 545, 648, 541)
+
+[node name="Item - tire" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "tire"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - tire"]
+position = Vector2(640, 360)
+texture = ExtResource("7_4kpch")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - tire"]
+polygon = PackedVector2Array(635, 664, 621, 662, 607, 651, 597, 634, 596, 616, 600, 603, 608, 592, 621, 584, 641, 583, 659, 590, 671, 604, 676, 620, 676, 633, 670, 645, 658, 657, 646, 662)
+
+[node name="Black Tint" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("4_pbw6q")
+
+[node name="TextureRect" type="TextureRect" parent="Black Tint"]
+offset_right = 258.0
+offset_bottom = 259.0
+scale = Vector2(5.01831, 2.86311)
+texture = ExtResource("5_v1gob")
+
+[node name="FullSceneRef" type="Sprite2D" parent="."]
+position = Vector2(1672, 712)
+scale = Vector2(0.50625, 0.666667)
+texture = ExtResource("7_50glp")
+
+[node name="Truck" type="Node2D" parent="."]
+script = ExtResource("12_1p5hy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Truck"]
+position = Vector2(2100, 49)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("12_grg3l")
+script = ExtResource("12_1p5hy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Truck"]
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("10_bmxlf")
+
+[node name="deadguy" type="Node2D" parent="."]
+script = ExtResource("14_h1m7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="deadguy"]
+position = Vector2(640, 360)
+texture = ExtResource("11_frkhe")
+
+[connection signal="input_event" from="Item - gun" to="Item - gun" method="_on_input_event"]
+[connection signal="mouse_entered" from="Item - gun" to="Item - gun" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Item - gun" to="Item - gun" method="_on_mouse_exited"]
+[connection signal="input_event" from="Item - hat" to="Item - hat" method="_on_input_event"]
+[connection signal="input_event" from="Item - wig" to="Item - wig" method="_on_input_event"]
+[connection signal="input_event" from="Item - tire" to="Item - tire" method="_on_input_event"]

@@ -1,0 +1,26 @@
+join "big mac" (7. No Funny Business) right
+"big mac" (1. Big Dawg): Well, well, well… [pause=0.5] what do we have here?
+leave "big mac"
+join frenchie (6. Joyful Scratch) left
+frenchie (3. Erm.. Rizz): A pretty girl.. all alone..
+frenchie (14. Smitten): You don't happen to be single now, do you?
+leave frenchie
+join "big mac" (7. No Funny Business) right
+"big mac" (5. Let Me Take A Closer Look): Hold your horses French Fry, that's no pretty girl.
+leave "big mac"
+join frenchie (6. Joyful Scratch) left
+frenchie (3. Erm.. Rizz): Ya it is? What do you know about pretty girls??
+leave frenchie
+join "big mac" (7. No Funny Business) right
+"big mac" (10. Hair): [lspeed=0.1]. . .
+leave "big mac"
+join frenchie (6. Joyful Scratch) left
+frenchie: Haha your hair's kinda long for a guy.
+leave frenchie
+join "big mac" (10. Hair) right
+"big mac" (7. No Funny Business): Well..[pause=0.3] yours is kind of...[pause=0.5] SHORT!
+leave "big mac"
+join frenchie (13. Shocked Scratch) left
+frenchie (15. Bald): HEY, MY WIG!!
+frenchie: Lock her up before she snitches!! I told everyone it was natural!
+[end_timeline]

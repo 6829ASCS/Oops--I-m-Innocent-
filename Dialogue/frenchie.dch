@@ -1,0 +1,155 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+&"default_portrait": "1. Erm.. Akshually",
+&"description": "",
+&"display_name": "",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 100),
+&"portraits": {
+"1. Erm.. Akshually": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Erm..Akshually.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"10. No Eye contact Erm Akshually": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/NoEyeContact_ErmAkshually.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"11. Peak Sadness": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/PeakSadness.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"12. Shocked Cry Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/ShocedCry_Scratch.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"13. Shocked Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Shocked_Scratch.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"14. Smitten": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Smitten.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"15. Bald": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Bald.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"2. Erm.. Akshually I'm Not OK": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Erm..Akshualyimnotok.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"3. Erm.. Rizz": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Erm..Rizz.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"4. Holding Breath": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/HolingBreath.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"5. Joyful Erm Akshually": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Joyful_ErmAkshually.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"6. Joyful Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Joyful_Scratch.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"7. Looking Down Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/LookingDown_Scratch.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"8. Mouth Open Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/MouthOpen_Scratch.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"9. Neutral Scratch": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/frenchie/Neutral_Scratch.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

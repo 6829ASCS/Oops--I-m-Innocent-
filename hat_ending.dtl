@@ -1,0 +1,7 @@
+[style name="Style Narrator 2"]
+[signal arg="black"]
+You wave the cops goodbye and ride off into the sunset, the warm sun on your skin and breeze running through your luscious blonde hair. 
+[signal arg="mob_boss"]
+As you ride on, you can’t help thinking about how close a small mistake came to getting you caught and completely destroying the legacy you had built.
+At least it’s over now - or so you say to yourself.
+[signal arg="end_transition"]

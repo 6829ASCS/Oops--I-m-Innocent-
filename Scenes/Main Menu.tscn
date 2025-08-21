@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://vqnpcuo1i12o"]
+
+[ext_resource type="Script" uid="uid://4gpsgivhaect" path="res://Scripts/start_game.gd" id="1_hcxxy"]
+[ext_resource type="Texture2D" uid="uid://dc1r3plsgpog3" path="res://Assets/Icons/Replay.PNG" id="2_ur25d"]
+[ext_resource type="Script" uid="uid://dq420ywlt3igw" path="res://Scripts/main_menu_transitions.gd" id="3_ur25d"]
+
+[sub_resource type="Animation" id="Animation_5jffn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aht7i"]
+resource_name = "fade_to_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kpo4j"]
+resource_name = "fade_to_normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n42c"]
+_data = {
+&"RESET": SubResource("Animation_5jffn"),
+&"fade_to_black": SubResource("Animation_aht7i"),
+&"fade_to_normal": SubResource("Animation_kpo4j")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eotax"]
+radius = 43.0
+height = 86.0
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="Transition" type="CanvasLayer" parent="."]
+script = ExtResource("3_ur25d")
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_4n42c")
+}
+
+[node name="New Game Button" type="Area2D" parent="."]
+position = Vector2(0, 24)
+script = ExtResource("1_hcxxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="New Game Button"]
+position = Vector2(640, 432)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ur25d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="New Game Button"]
+position = Vector2(641, 425)
+shape = SubResource("CapsuleShape2D_eotax")
+
+[connection signal="input_event" from="New Game Button" to="New Game Button" method="_on_input_event"]
+[connection signal="mouse_entered" from="New Game Button" to="New Game Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="New Game Button" to="New Game Button" method="_on_mouse_exited"]

@@ -1,0 +1,27 @@
+join "big mac" (7. No Funny Business) right
+"big mac" (1. Big Dawg): Well, well, well… [pause=0.5] what do we have he-
+"big mac" (9. WATDAHELL): [lspeed=0.2] . . .
+[sound path="res://Assets/Audio/gun-reload.mp3" volume="0.0"]
+[wait time="1.0"]
+[sound path="res://Assets/Audio/gunshot-1.mp3" volume="0.0"]
+[wait time="0.2"]
+[sound path="res://Assets/Audio/gunshot-2.mp3" volume="0.0"]
+leave "big mac" [animation="Fade Out Down" length="0.3"]
+join frenchie (13. Shocked Scratch) left
+frenchie: OH, FIDDLESTICKS! Seargent Big Mac?!!
+frenchie (12. Shocked Cry Scratch): [lspeed=0.01]N-no..[pause=0.4] how could you..[pause=0.4] why...
+frenchie (2. Erm.. Akshually I'm Not OK): You might as well shoot me too now..[pause=0.4] fries are nothing without the burger.
+frenchie (11. Peak Sadness): [lspeed=0.2] . . .
+frenchie (12. Shocked Cry Scratch): [lspeed = 0.01]Do you have no remorse?? Are you not at least sorry!?
+frenchie: [lspeed = 0.01]You took Big Mac's life without even blinking twice, so why can't you take mine!??
+frenchie: Just..[pause=0.4] DO IT ALREADY!!
+frenchie (11. Peak Sadness): [lspeed=0.2] . . .
+[sound path="res://Assets/Audio/gun-reload.mp3" volume="0.0"]
+[wait time="1.0"]
+[sound path="res://Assets/Audio/gunshot-1.mp3" volume="0.0"]
+leave frenchie
+[wait time="1.5"]
+[sound path="res://Assets/Audio/quack-quack_2Odapw6.mp3" volume="0.0"]
+join samson left
+samson: You got a license for that?
+[end_timeline]

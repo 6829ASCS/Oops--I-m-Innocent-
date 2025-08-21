@@ -1,0 +1,334 @@
+[gd_scene load_steps=38 format=3 uid="uid://fv3qm5y4dlr4"]
+
+[ext_resource type="Script" uid="uid://d3dgkd0oakflq" path="res://Scripts/CrimeScene.gd" id="1_346fj"]
+[ext_resource type="Texture2D" uid="uid://b3fsxh4d1uxwj" path="res://Assets/crime scene/Car.PNG" id="2_jw32o"]
+[ext_resource type="Script" uid="uid://cip2wgf4yosgl" path="res://Scripts/item_script.gd" id="3_kln2b"]
+[ext_resource type="Script" uid="uid://c6gd6mtjxtliy" path="res://Scripts/black_transition.gd" id="4_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://c3kplkmhefule" path="res://Assets/crime scene/Road.PNG" id="5_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://hwbkjqpmsrht" path="res://Assets/crime scene/Tire.PNG" id="7_4kpch"]
+[ext_resource type="Texture2D" uid="uid://d2dwd72rxq3ey" path="res://Assets/crime scene/Gun.PNG" id="8_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://dhhl5klgnjkl1" path="res://Assets/crime scene/Hat.PNG" id="9_4kpch"]
+[ext_resource type="Script" uid="uid://c8si0huuuclv1" path="res://Scenes/car.gd" id="10_5jffn"]
+[ext_resource type="Texture2D" uid="uid://rcq4m75iifxv" path="res://Assets/crime scene/Trees.PNG" id="10_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://vr7sl77sby74" path="res://Assets/crime scene/GirlWig.PNG" id="10_grg3l"]
+[ext_resource type="Texture2D" uid="uid://h2len6261mgg" path="res://Assets/crime scene/PreCrash.PNG" id="11_frkhe"]
+[ext_resource type="Script" uid="uid://bug2mtwm08gw3" path="res://Scripts/truck.gd" id="12_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://msy5kct7s3lk" path="res://Assets/crime scene/Truck.PNG" id="12_grg3l"]
+[ext_resource type="AudioStream" uid="uid://d03rg5vwbudif" path="res://Assets/Audio/car-engine-startin.mp3" id="12_kpo4j"]
+[ext_resource type="AudioStream" uid="uid://cmqo6in5xvsri" path="res://Assets/Audio/bone-crack.mp3" id="13_erwvk"]
+[ext_resource type="Texture2D" uid="uid://beopf6goq1yg4" path="res://Assets/crime scene/BloodTrail.PNG" id="14_fq0cl"]
+[ext_resource type="Script" uid="uid://ce5t3irngoo12" path="res://Scripts/deadguy.gd" id="14_h1m7h"]
+[ext_resource type="AudioStream" uid="uid://d03t78e0uawxm" path="res://Assets/Audio/car horn pass by  Sound Effect.mp3" id="16_2w5on"]
+[ext_resource type="Texture2D" uid="uid://cgb3taierqsb3" path="res://Assets/crime scene/Head.PNG" id="16_4n42c"]
+[ext_resource type="Script" uid="uid://dtideu0ne3rtn" path="res://Scripts/tree_hole.gd" id="19_0sclb"]
+[ext_resource type="Texture2D" uid="uid://ppil3p7o78g4" path="res://Assets/CGs/DuckInTree.PNG" id="20_sxkr1"]
+[ext_resource type="Script" uid="uid://dolffu7ap4t1s" path="res://Scripts/poster_interact.gd" id="22_jyqft"]
+[ext_resource type="Texture2D" uid="uid://21rjorft2rmj" path="res://Assets/crime scene/Wanted.PNG" id="23_3tgeq"]
+[ext_resource type="Texture2D" uid="uid://dbwpd5hv4xa2" path="res://Assets/crime scene/MissingDuck.PNG" id="24_3tgeq"]
+[ext_resource type="Script" uid="uid://82ovywqfd3i5" path="res://Scripts/police_lights.gd" id="24_aht7i"]
+[ext_resource type="Texture2D" uid="uid://qyyblvjiara2" path="res://Assets/crime scene/PoliceLights.PNG" id="24_c4ay3"]
+[ext_resource type="AudioStream" uid="uid://d0drpjaidg3ll" path="res://Assets/Audio/siren-brr-brr.mp3" id="25_aht7i"]
+[ext_resource type="Texture2D" uid="uid://c43t1t1utv5s5" path="res://Assets/crime scene/LazyPrickLights.PNG" id="26_5jffn"]
+[ext_resource type="Script" uid="uid://bfuxqoii83kym" path="res://Scenes/countdown.gd" id="30_c5snn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jyqft"]
+radius = 41.0
+height = 104.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxkr1"]
+radius = 32.0
+height = 64.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5jffn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_c4ay3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5jffn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_5jffn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aht7i"]
+resource_name = "fade_to_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kpo4j"]
+resource_name = "fade_to_normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n42c"]
+_data = {
+&"RESET": SubResource("Animation_5jffn"),
+&"fade_to_black": SubResource("Animation_aht7i"),
+&"fade_to_normal": SubResource("Animation_kpo4j")
+}
+
+[node name="CrimeScene" type="Node2D"]
+script = ExtResource("1_346fj")
+
+[node name="Road" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("5_pbw6q")
+
+[node name="deadguy" type="Area2D" parent="."]
+script = ExtResource("14_h1m7h")
+
+[node name="Sprite" type="Sprite2D" parent="deadguy"]
+position = Vector2(640, 360)
+texture = ExtResource("11_frkhe")
+
+[node name="Blood Trail" type="Sprite2D" parent="deadguy"]
+position = Vector2(640, 360)
+texture = ExtResource("14_fq0cl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="deadguy"]
+polygon = PackedVector2Array(642, 197, 659, 167, 656, 142, 664, 154, 706, 165, 708, 144, 674, 133, 675, 94, 714, 71, 699, 60, 675, 63, 648, 42, 621, 36, 590, 58, 576, 72, 607, 103, 618, 110, 617, 135)
+
+[node name="Truck" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Truck"]
+position = Vector2(2087, 95)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("12_grg3l")
+script = ExtResource("12_1p5hy")
+
+[node name="truck horn" type="AudioStreamPlayer2D" parent="Truck/Sprite2D"]
+position = Vector2(-3230.77, -75.3846)
+scale = Vector2(1.53846, 1.53846)
+stream = ExtResource("16_2w5on")
+
+[node name="bone crack" type="AudioStreamPlayer2D" parent="Truck"]
+stream = ExtResource("13_erwvk")
+volume_db = 20.0
+
+[node name="Car" type="Node2D" parent="."]
+script = ExtResource("10_5jffn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Car"]
+position = Vector2(640, 360)
+texture = ExtResource("2_jw32o")
+
+[node name="Engine Start" type="AudioStreamPlayer2D" parent="Car"]
+stream = ExtResource("12_kpo4j")
+volume_db = 15.0
+max_distance = 1250.0
+
+[node name="bone crack" type="AudioStreamPlayer2D" parent="Car"]
+stream = ExtResource("13_erwvk")
+volume_db = 16.0
+
+[node name="Item - gun" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "gun"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - gun"]
+position = Vector2(635, 360)
+texture = ExtResource("8_bmxlf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - gun"]
+position = Vector2(-5, 0)
+polygon = PackedVector2Array(599, 544, 608, 542, 613, 536, 619, 526, 623, 518, 622, 509, 593, 519)
+
+[node name="Item - hat" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "hat"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - hat"]
+position = Vector2(640, 360)
+texture = ExtResource("9_4kpch")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - hat"]
+polygon = PackedVector2Array(649, 468, 657, 475, 700, 470, 703, 465, 694, 456, 697, 446, 687, 435, 673, 433, 659, 438, 644, 425, 655, 450, 650, 457)
+
+[node name="player mini" type="Sprite2D" parent="Item - hat"]
+position = Vector2(640, 360)
+texture = ExtResource("16_4n42c")
+
+[node name="Item - wig" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "wig"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - wig"]
+position = Vector2(640, 360)
+texture = ExtResource("10_grg3l")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - wig"]
+polygon = PackedVector2Array(650, 548, 641, 541, 633, 519, 634, 509, 639, 504, 644, 503, 651, 498, 657, 498, 668, 503, 680, 515, 684, 527, 681, 534, 676, 541, 665, 545, 658, 545)
+
+[node name="Item - tire" type="Area2D" parent="."]
+script = ExtResource("3_kln2b")
+item_name = "tire"
+
+[node name="Sprite2D" type="Sprite2D" parent="Item - tire"]
+position = Vector2(640, 360)
+texture = ExtResource("7_4kpch")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Item - tire"]
+polygon = PackedVector2Array(635, 664, 621, 662, 607, 651, 597, 634, 596, 616, 600, 603, 608, 592, 621, 584, 641, 583, 659, 590, 671, 604, 676, 620, 676, 633, 670, 645, 658, 657, 646, 662)
+
+[node name="Hat on head" type="Sprite2D" parent="."]
+position = Vector2(640, -40)
+rotation = 2.97329
+scale = Vector2(0.8, -0.8)
+texture = ExtResource("9_4kpch")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("10_bmxlf")
+
+[node name="Wanted Poster" type="Area2D" parent="."]
+script = ExtResource("22_jyqft")
+poster_id = "wanted"
+
+[node name="Sprite2D" type="Sprite2D" parent="Wanted Poster"]
+position = Vector2(640, 360)
+texture = ExtResource("23_3tgeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wanted Poster"]
+position = Vector2(314, 582)
+shape = SubResource("CapsuleShape2D_jyqft")
+
+[node name="Missing Poster" type="Area2D" parent="."]
+script = ExtResource("22_jyqft")
+poster_id = "missing"
+
+[node name="Sprite2D" type="Sprite2D" parent="Missing Poster"]
+position = Vector2(640, 360)
+texture = ExtResource("24_3tgeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Missing Poster"]
+position = Vector2(917, 278)
+shape = SubResource("CapsuleShape2D_jyqft")
+
+[node name="Car Engine" type="Area2D" parent="."]
+script = ExtResource("22_jyqft")
+poster_id = "car"
+
+[node name="Sprite2D" type="Sprite2D" parent="Car Engine"]
+position = Vector2(640, 360)
+texture = ExtResource("24_3tgeq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Car Engine"]
+polygon = PackedVector2Array(543, 349, 551, 245, 580, 226, 635, 214, 694, 228, 717, 238, 725, 258, 728, 359, 663, 327, 606, 329)
+
+[node name="Tree Hole" type="Area2D" parent="."]
+script = ExtResource("19_0sclb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree Hole"]
+position = Vector2(1246, 69)
+shape = SubResource("CapsuleShape2D_sxkr1")
+
+[node name="DuckInTree" type="Sprite2D" parent="Tree Hole"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("20_sxkr1")
+
+[node name="Police lights & siren" type="Node2D" parent="."]
+position = Vector2(640, 360)
+script = ExtResource("24_aht7i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Police lights & siren"]
+sprite_frames = SubResource("SpriteFrames_5jffn")
+autoplay = "default"
+frame_progress = 0.142059
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Police lights & siren"]
+stream = ExtResource("25_aht7i")
+
+[node name="Transition" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("4_pbw6q")
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_4n42c")
+}
+
+[node name="Countdown" type="Node" parent="."]
+script = ExtResource("30_c5snn")
+
+[node name="Label" type="Label" parent="Countdown"]
+offset_left = 27.0
+offset_top = 24.0
+offset_right = 155.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 50
+text = "00:05"
+
+[node name="Timer" type="Timer" parent="Countdown"]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="input_event" from="deadguy" to="deadguy" method="_on_input_event"]
+[connection signal="mouse_entered" from="deadguy" to="deadguy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="deadguy" to="deadguy" method="_on_mouse_exited"]
+[connection signal="input_event" from="Item - gun" to="Item - gun" method="_on_input_event"]
+[connection signal="mouse_entered" from="Item - gun" to="Item - gun" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Item - gun" to="Item - gun" method="_on_mouse_exited"]
+[connection signal="input_event" from="Item - hat" to="Item - hat" method="_on_input_event"]
+[connection signal="input_event" from="Item - wig" to="Item - wig" method="_on_input_event"]
+[connection signal="input_event" from="Item - tire" to="Item - tire" method="_on_input_event"]
+[connection signal="input_event" from="Wanted Poster" to="Wanted Poster" method="_on_input_event"]
+[connection signal="mouse_entered" from="Wanted Poster" to="Wanted Poster" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Wanted Poster" to="Wanted Poster" method="_on_mouse_exited"]
+[connection signal="input_event" from="Missing Poster" to="Missing Poster" method="_on_input_event"]
+[connection signal="mouse_entered" from="Missing Poster" to="Missing Poster" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Missing Poster" to="Missing Poster" method="_on_mouse_exited"]
+[connection signal="input_event" from="Car Engine" to="Car Engine" method="_on_input_event"]
+[connection signal="mouse_entered" from="Car Engine" to="Car Engine" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Car Engine" to="Car Engine" method="_on_mouse_exited"]
+[connection signal="input_event" from="Tree Hole" to="Tree Hole" method="_on_input_event"]
+[connection signal="mouse_entered" from="Tree Hole" to="Tree Hole" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tree Hole" to="Tree Hole" method="_on_mouse_exited"]

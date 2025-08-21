@@ -1,0 +1,8 @@
+[style name="Style Narrator 2"]
+[signal arg="black"]
+The sound of the gunshots you fired that night rings in your ears.
+You don’t resist as Samson cuffs you and shoves you into the back of his car.
+You can’t help but wonder if that night could’ve gone differently. Maybe if you had hesitated, if you didn't grab your gun, none of this would have happened.
+[signal arg="jail"]
+You are convicted of first-degree murder and sentenced to life in prison.
+[signal arg="end_transition"]
