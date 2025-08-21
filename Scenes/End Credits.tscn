@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfwfjked5um3y"]
 
 [ext_resource type="Script" uid="uid://bwhxoa55u3quv" path="res://Scripts/end_credits.gd" id="1_gtxoe"]
-[ext_resource type="AudioStream" uid="uid://m6817mw7khis" path="res://Assets/Audio/video-game-music-leveltitlecredits-281267.mp3" id="2_0fyeo"]
+[ext_resource type="AudioStream" uid="uid://m6817mw7khis" path="res://Dialogue/video-game-music-leveltitlecredits-281267.mp3" id="2_0fyeo"]
 [ext_resource type="Texture2D" uid="uid://cdxld7awppo1c" path="res://Assets/CGs/OOPS, I’M INNOCENT!.png" id="2_kai77"]
 
 [sub_resource type="Animation" id="Animation_0fyeo"]
