@@ -1,2 +1,1 @@
-# Untitled VN Game
-Oops, I'm Innocent!
+# Oops, I'm Innocent!
